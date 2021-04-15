@@ -19,6 +19,7 @@ class CreateProductOptionsTable extends Migration
             $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
             $table->smallInteger('stock');
             $table->unsignedTinyInteger('size');
+            $table->string('image')->nullable();
             $table->unsignedSmallInteger('color');
             $table->timestamps();
         });
